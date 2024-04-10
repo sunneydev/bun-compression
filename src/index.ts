@@ -58,8 +58,12 @@ export const compress = (
         ? gzipSync(toBuffer(c.res.body, encoding), options)
         : deflateSync(toBuffer(c.res.body, encoding), options)
 
+    const status = c.res.status
+    const statusText = c.res.statusText
     c.res = new Response(compressedBody, {
       headers: c.res.headers,
+      status: status,
+      statusText: statusText,
     })
     c.res.headers.set('Content-Encoding', type)
   }
