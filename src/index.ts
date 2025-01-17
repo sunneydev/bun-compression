@@ -60,6 +60,7 @@ export const compress = (
 
     c.res = new Response(compressedBody, {
       headers: c.res.headers,
+      status: c.res.status
     })
     c.res.headers.set('Content-Encoding', type)
   }
