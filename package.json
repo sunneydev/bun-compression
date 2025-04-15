@@ -1,6 +1,6 @@
 {
   "name": "bun-compression",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Hono Compression plugin for Bun",
   "author": {
     "name": "sunneydev",
